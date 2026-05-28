@@ -1,76 +1,50 @@
-# Mini Project 2 - Learning Objectives
+# Mini Project 2: Diving Deeper into Machine Learning
 
 ## Overview
-This repository contains solutions to **Mini Project 2** of the *Machine Learning (Spring 1403)* course. It focuses on advanced machine learning concepts including neural networks, classification techniques, evaluation metrics, and tree-based models.
+This repo contains my solutions for **Mini Project 2** of the *Machine Learning (Spring 1403)* course. We really got into some core ML topics here, exploring neural network basics, advanced classification strategies, and the power of ensemble methods.
 
 ---
 
-## What You'll Learn
+# What I Explored & Learned
 
-### Question 1: Activation Functions and Neural Networks
-1. **Activation Functions**: Analyze a binary classification problem using either a Sigmoid or ReLU activation function in the final network layer. Discuss their behaviors and compare gradients.  
-   - **ELU Equation**:  
-     - ELU(x) = x if x ≥ 0  
-     - ELU(x) = α (eˣ - 1) if x < 0
+## Question 1: Activation Functions & Simple Neural Networks
+*   **Activation Functions:** Looked at how Sigmoid and ReLU (and ELU!) act as activation functions in neural networks, especially for binary classification. We compared how they work and their gradients.
+    *   *ELU Equation Note:*
+        *   ELU(x) = x if x ≥ 0
+        *   ELU(x) = α (eˣ - 1) if x < 0
+*   **McCulloch-Pitts Neuron:** Built a basic neural network (like a perceptron) to classify a shaded triangle.
+    *   Generated about 2000 random points.
+    *   Visualized the decision boundaries with two different activation functions.
 
-2. **McCulloch-Pitts Neuron**:  
-   Design a simple neural network using a McCulloch-Pitts or perceptron model to classify a shaded triangular region.  
-   - Generate 2000 random points.  
-   - Use two different activation functions.  
-   - Visualize and analyze decision boundaries.
+## Question 2: Fault Detection with MLP
+*   **Data Prep:** Worked with the CWRU Bearing dataset, picking out examples of both healthy and faulty states.
+*   **Building the MLP:** Trained a Multi-Layer Perceptron (MLP) to classify these states.
+    *   Did the usual feature extraction and normalization.
+    *   Split the data into training, validation, and testing sets.
+    *   Evaluated performance using accuracy, a confusion matrix, and a classification report.
+*   **Tweaking Performance:** Experimented with different loss functions and optimizers to see how they affected the model's results.
 
----
+## Question 3: Trees & Ensembles
+*   **Dataset:** Used datasets like forest cover types or drug classification.
+*   **Decision Trees:** Built and visualized a decision tree, then checked its accuracy and confusion matrix.
+*   **Fine-Tuning Trees:** Analyzed how things like pruning depth affect the tree's performance.
+*   **Ensemble Power:** Implemented and compared AdaBoost and Random Forest models, tuning parameters to get better results.
 
-### Question 2: Fault Detection with MLP
-1. **Data Processing**:  
-   Use the CWRU Bearing dataset. Select and describe faulty and healthy data samples.
-
-2. **Modeling**:  
-   Train a Multi-Layer Perceptron (MLP) model for classification.  
-   - Feature extraction and normalization  
-   - Splitting into train/validation/test sets  
-   - Evaluation using accuracy, confusion matrix, and classification report
-
-3. **Comparison**:  
-   Test different loss functions and optimizers. Analyze their effects on model performance.
-
----
-
-### Question 3: Decision Trees and Ensemble Methods
-1. **Dataset Selection**:  
-   Use datasets like forest cover types or drug classification.
-
-2. **Decision Tree Modeling**:  
-   Train and visualize a decision tree. Evaluate using confusion matrix and accuracy.
-
-3. **Pruning and Hyperparameters**:  
-   Analyze the impact of pruning depth and other tree parameters.
-
-4. **Ensemble Methods**:  
-   Implement and compare AdaBoost and Random Forest models. Improve results with parameter tuning.
-
----
-
-### Question 4: Naive Bayes for Heart Disease Prediction
-1. **Preprocessing**:  
-   Use the heart disease dataset. Apply normalization and train-test splitting.
-
-2. **Model Training**:  
-   Train a Gaussian Naive Bayes classifier.  
-   - Evaluate using confusion matrix  
-   - Compare **Micro** vs **Macro** metrics using `classification_report`
-
-3. **Prediction Comparison**:  
-   Randomly select 5 test samples. Compare model predictions with ground truth.
+## Question 4: Naive Bayes for Heart Health
+*   **Getting Ready:** Used the heart disease dataset, applying normalization and splitting it for training and testing.
+*   **Gaussian Naive Bayes:** Trained a Gaussian Naive Bayes classifier.
+    *   Evaluated with a confusion matrix.
+    *   Compared Micro vs. Macro metrics from the `classification_report`.
+*   **Checking Predictions:** Picked 5 random test samples and compared the model's predictions against the actual results.
 
 ---
 
 ## Tools & Libraries
-- Python (Jupyter Notebook)
-- Scikit-learn
-- NumPy, Pandas, Matplotlib
-- Google Colab
-- Public Datasets (Kaggle, CWRU)
+- Python (mostly in Jupyter Notebooks)
+- Scikit-learn (the MVP for most of this!)
+- NumPy, Pandas, Matplotlib (for data wrangling and plotting)
+- Google Colab (for when things got computationally heavy)
+- Public Datasets (Kaggle, CWRU, etc. - good practice finding them!)
 
 ---
 
